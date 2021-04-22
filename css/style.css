@@ -18,6 +18,9 @@ nav {
 header {
     border-bottom: 2px solid black;
 }
+footer {
+    margin-top: 20px;
+}
 #checkbox-menu,
 .toggle {
     display: none;
@@ -274,6 +277,35 @@ p.slide-info {
 .slider .slick-arrow:hover {
     width: 40px;
     height: 80px;
+}
+.footer-block {
+    display: flex;
+}
+.footer-text {
+    text-align: center;
+    width: 33.33%;
+}
+.footer-left {
+    width: 33.33%;
+}
+.footer-icons {
+    text-align: right;
+    width: 33.33%;
+    margin-right: 2%;
+    margin-top: 1%;
+}
+.footer-icons img:nth-child(2) {
+    width: 40px;
+    height: 40px;
+    padding-left: 8px;
+}
+.footer-text h3 {
+    text-align: center;
+    font-size: 18px;
+    line-height: 17px;
+}
+.footer-text p {
+    font-size: 14px;
 }
 
 .square {
@@ -654,6 +686,9 @@ p.topuser-age {
         margin: -15% 0 0 0;
         padding-bottom: 15%;
     }
+    .slide-text h3 {
+        color: #d65495;
+    }
     .btn-order {
         font-size: 18px;
         width: 130px;
@@ -668,6 +703,22 @@ p.topuser-age {
         width: 20px;
         height: 40px;
     }
+    .footer-icons img,
+    .footer-icons img:nth-child(2) {
+        width: 25px;
+        height: 25px;
+    }
+    .footer-icons {
+        margin-top: 7%;
+    }
+    .footer-text p {
+        font-size: 11px;
+        margin-top: -4%;
+    }
+    .footer-text h3 {
+        color: #d65495;
+    }
+
     .square {
         height: 140px;
     }
