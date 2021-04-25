@@ -469,13 +469,17 @@ p.slide-info {
     display: flex;
     flex-wrap: wrap;
 }
+
 .place-block {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 438px;
     height: 504px;
+    width: 33.33%;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    padding-bottom: 35px;
 }
 .place-block:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
@@ -489,12 +493,11 @@ p.slide-info {
     margin-right: 0;
     width: 100%;
     padding-left: 10%;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 .place-button .btn-order {
     position: relative;
     margin: 0 auto;
-    margin-bottom: 20%;
 }
 .place-button .btn-order:hover {
     background: #fff;
@@ -507,20 +510,16 @@ p.slide-info {
     font-weight: 400;
     margin-bottom: 30px;
 }
-.place-info i {
+.place-info span {
     font-size: 18px;
     font-weight: 400;
-    line-height: 24px;
-}
-#text-adress {
+    line-height: 25px;
     text-decoration: underline;
 }
-.place-block {
-    width: 33.33%;
-    padding-top: 30px;
-    margin-top: 40px;
+.fa,
+.fas {
+    font-weight: 400;
 }
-
 .all {
     width: 250px;
     height: 70px;
@@ -795,6 +794,9 @@ p.topuser-age {
         margin-top: 2%;
         font-size: 18px;
         line-height: 25px;
+        padding-left: 10%;
+        padding-right: 10%;
+        text-align: center;
     }
 
     .slide1,
@@ -897,5 +899,24 @@ p.topuser-age {
     }
     .cards .slick-arrow {
         display: none;
+    }
+    .place-block {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        width: 90%;
+        padding-left: 5%;
+        padding-right: 5%;
+        overflow: hidden;
+    }
+    .place-info span {
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .place-block h3 {
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .fa,
+    .fas {
+        font-weight: 400;
     }
 }
