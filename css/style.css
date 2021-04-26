@@ -479,7 +479,7 @@ p.slide-info {
     width: 33.33%;
     margin-top: 40px;
     margin-bottom: 25px;
-    padding-bottom: 35px;
+    padding-bottom: 60px;
 }
 .place-block:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
@@ -493,8 +493,9 @@ p.slide-info {
     margin-right: 0;
     width: 100%;
     padding-left: 10%;
-    margin-bottom: 30px;
+    padding-bottom: 40px;
 }
+
 .place-button .btn-order {
     position: relative;
     margin: 0 auto;
@@ -915,7 +916,7 @@ p.topuser-age {
         font-size: 18px;
         font-weight: 400;
     }
-    .fa,
+    .places .fa,
     .fas {
         font-weight: 400;
     }
