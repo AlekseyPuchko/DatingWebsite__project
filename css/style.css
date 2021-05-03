@@ -692,8 +692,7 @@ p.slide-info {
     background: #d65495;
     color: #fff;
 }
-.stepblock:hover .stepinfolast {
-}
+
 .steps-container {
     margin-bottom: 50px;
     display: flex;
@@ -856,8 +855,6 @@ p.topuser-age {
 }
 .popup__title p {
     font-size: 25px;
-    text-align: center;
-    margin-bottom: 0;
 }
 .popup__text {
     display: flex;
@@ -1179,5 +1176,56 @@ p.topuser-age {
     }
     .steps-text {
         margin-left: 10%;
+    }
+    .popup {
+        padding-right: 5%;
+        padding-left: 5%;
+        overflow: auto;
+    }
+
+    .popup__content {
+        background-color: #fff;
+        color: #000;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .popup__close {
+        position: absolute;
+        right: 47%;
+        top: 1%;
+        font-size: 40px;
+        text-decoration: none;
+        color: #3a3939;
+    }
+    .popup__title {
+        font-size: 21px;
+        margin-top: 8%;
+        text-align: center;
+        font-weight: 600;
+        max-width: 40%;
+    }
+    .popup__title p {
+        font-size: 17px;
+    }
+    .popup__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .popup__text img {
+        height: 48vh;
+        width: 80vw;
+        padding: 3% 5%;
+    }
+    .popup__text p {
+        font-size: 17px;
+        line-height: 25px;
+        max-width: 40%;
+        margin-top: 0;
+        margin-bottom: 10%;
     }
 }
