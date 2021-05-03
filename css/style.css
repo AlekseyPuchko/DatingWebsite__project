@@ -118,32 +118,12 @@ footer {
 .intro-contacts {
     display: none;
 }
-/*.intro-contacts {
-    background-color: #d65495;
-    max-width: 100%;
-    position: absolute;
-    right: 170px;
-    top: 638px;
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 50px;
-}
-.intro-contacts i {
-    color: #fff;
-    margin-right: 30px;
-}
-.intro-contacts p {
-    font-size: 18px;
-    margin-right: 60px;
-}*/
 .stats {
     display: flex;
     margin-top: 5%;
     justify-content: center;
 }
-/*.stats-line {
-    display: flex;
-}*/
+
 .stats-text {
     display: flex;
     flex-direction: column;
@@ -241,7 +221,7 @@ footer {
     align-items: center;
 }
 .slide-text h3 {
-    margin-top: 25%;
+    margin-top: 20%;
     text-align: center;
     color: #fff;
     font-size: 24px;
@@ -672,17 +652,27 @@ p.slide-info {
 }
 
 .steps h2 {
-    margin-top: 55px;
+    margin-top: 45px;
     font-size: 40px;
     margin-bottom: 35px;
+    text-align: center;
 }
 .steps-text {
     line-height: 27px;
-    font-size: 13px;
+    font-size: 17px;
+    max-width: 80%;
+    text-align: center;
+    margin-left: 10%;
+    margin-bottom: 55px;
 }
-.mbtext {
-    margin-bottom: 70px;
+.steps a.steps-links {
+    text-decoration: none;
+    color: #000;
 }
+.steps a.steps-links:hover {
+    color: #fff;
+}
+
 .stepblock {
     width: 340px;
     height: 400px;
@@ -952,6 +942,7 @@ p.topuser-age {
     }
     .slide-text h3 {
         color: #d65495;
+        margin-top: 25%;
     }
     .btn-order {
         font-size: 18px;
@@ -1071,7 +1062,6 @@ p.topuser-age {
     .people-text {
         position: relative;
         margin-left: 5%;
-        align-items: center;
     }
     .people-text h4 {
         font-size: 20px;
@@ -1109,5 +1099,11 @@ p.topuser-age {
     .people-button img {
         height: 32px;
         width: 32px;
+    }
+    .steps h2 {
+        font-size: 30px;
+    }
+    .steps-text {
+        margin-left: 10%;
     }
 }
