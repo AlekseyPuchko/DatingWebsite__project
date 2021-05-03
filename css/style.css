@@ -345,15 +345,16 @@ p.slide-info {
     justify-content: space-between;
     margin-top: 30px;
 }
-.card-info .money button {
+.card-info a {
     font-size: 18px;
     color: #d65495;
     padding: 0.6em 1.5em;
     background-color: transparent;
     border: 1px solid #d65495;
     border-radius: 25px;
+    text-decoration: none;
 }
-.card-info .money button:hover {
+.card-info .money a:hover {
     color: #fff;
     background: #d65495;
 }
@@ -800,6 +801,78 @@ p.topuser-age {
     font-size: 18px;
     color: #5e3462;
 }
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+.popup:target {
+    opacity: 1;
+    visibility: visible;
+}
+.popup__area {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: zoom-out;
+}
+.popup__body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10%;
+}
+.popup__content {
+    background-color: #fff;
+    color: #000;
+    min-width: 800px;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.popup__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 25px;
+    text-decoration: none;
+    color: #3a3939;
+}
+.popup__title {
+    font-size: 40px;
+    margin: 0 0 1em 0;
+    text-align: center;
+}
+.popup__title p {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 0;
+}
+.popup__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup__text img {
+    height: 55vh;
+    width: 32vw;
+}
+.popup__text p {
+    font-size: 17px;
+    padding: 0 5%;
+    line-height: 25px;
+}
 
 @media screen and (max-width: 765px) {
     .toggle {
@@ -983,6 +1056,7 @@ p.topuser-age {
         margin-top: 20px;
         width: 130px;
     }
+
     .buttons-search {
         flex-direction: column;
         margin-left: 5%;
