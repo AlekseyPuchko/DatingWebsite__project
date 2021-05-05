@@ -22,6 +22,10 @@ footer {
     margin-top: 20px;
     margin-bottom: 10px;
 }
+
+.hide {
+    visibility: hidden;
+}
 #checkbox-menu,
 .toggle {
     display: none;
@@ -519,9 +523,14 @@ p.slide-info {
     border-radius: 20px;
     border: 1px solid #000;
     line-height: 2em;
-    text-indent: 25px;
+    text-indent: 35px;
     padding-right: 38vw;
     max-width: 100%;
+    background-image: url("/img/search-icon.svg");
+    background-repeat: no-repeat;
+    background-size: 25px 33px;
+    background-position: 7px;
+    opacity: 0.7;
 }
 
 .people-text {
@@ -638,6 +647,7 @@ p.slide-info {
     border-radius: 10px;
     text-align: center;
     background-color: rgb(221, 223, 238);
+    margin-bottom: 5%;
 }
 .find-age span {
     margin-left: 15%;
@@ -1179,7 +1189,7 @@ p.topuser-age {
     }
     .popup {
         padding-right: 5%;
-        padding-left: 5%;
+        padding-left: 0;
         overflow: auto;
     }
 
