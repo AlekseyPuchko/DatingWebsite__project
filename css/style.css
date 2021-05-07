@@ -248,17 +248,19 @@ p.slide-info {
 }
 .btn-order {
     width: 137px;
-    height: 45px;
+    height: 37px;
+    padding: 5px 10px;
     font-size: 24px;
     line-height: 32px;
-    position: relative;
     border: 2px solid white;
-    border-radius: 22px;
+    border-radius: 30px;
     background: #3a3939;
     color: #fff;
     position: absolute;
     top: 86%;
     cursor: pointer;
+    text-decoration: none;
+    text-align: center;
 }
 .btn-order:hover {
     background: #fff;
@@ -484,6 +486,8 @@ p.slide-info {
 .place-button .btn-order {
     position: relative;
     margin: 0 auto;
+    height: auto;
+    border: none;
 }
 .place-button .btn-order:hover {
     background: #fff;
@@ -819,6 +823,7 @@ p.topuser-age {
     left: 0;
     opacity: 0;
     visibility: hidden;
+    z-index: 9999999;
 }
 .popup:target {
     opacity: 1;
@@ -881,8 +886,7 @@ p.topuser-age {
     line-height: 25px;
 }
 /*стили формы регистрации*/
-.popup-register {
-}
+
 .reg-h2 {
     text-align: center;
     color: #fff;
@@ -1120,21 +1124,15 @@ option {
         color: #d65495;
         margin-top: 25%;
     }
-    .btn-order {
-        font-size: 18px;
-        width: 130px;
-        height: 40px;
-        margin-left: -3%;
-        background: #3a3939;
-        color: #fff;
-    }
 
     .slider .slick-arrow,
     .slider .slick-arrow:hover {
         margin-top: 2%;
         width: 20px;
         height: 40px;
+        margin-left: 27%;
     }
+
     .footer-icons img,
     .footer-icons img:nth-child(2) {
         width: 25px;
@@ -1338,5 +1336,8 @@ option {
         position: absolute;
         right: 60px;
         top: 20px;
+    }
+    .btn-order {
+        top: 85%;
     }
 }

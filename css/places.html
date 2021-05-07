@@ -75,7 +75,7 @@
             </section>
             <section class="places">
                 <div class="places-container">
-                    <div class="place-block">
+                    <div class="place-block" id="place4">
                         <h3>Ресторан “MELT & HOPES”</h3>
                         <img src="/img/place-img1.jpg" alt="" />
 
@@ -97,10 +97,12 @@
                             >
                         </div>
                         <div class="place-button">
-                            <button class="btn-order">Заказать</button>
+                            <a href="#popup-order2" class="btn-order">
+                                Заказать
+                            </a>
                         </div>
                     </div>
-                    <div class="place-block">
+                    <div class="place-block" id="place5">
                         <h3>Ресторан “ASIA’S WIND”</h3>
                         <img src="/img/place-img2.jpg" alt="" />
 
@@ -122,10 +124,12 @@
                             >
                         </div>
                         <div class="place-button">
-                            <button class="btn-order">Заказать</button>
+                            <a href="#popup-order2" class="btn-order">
+                                Заказать
+                            </a>
                         </div>
                     </div>
-                    <div class="place-block">
+                    <div class="place-block" id="place6">
                         <h3>Кофейня “EYFEL BAKERY”</h3>
                         <img src="/img/place-img3.jpg" alt="" />
 
@@ -147,10 +151,12 @@
                             >
                         </div>
                         <div class="place-button">
-                            <button class="btn-order">Заказать</button>
+                            <a href="#popup-order2" class="btn-order">
+                                Заказать
+                            </a>
                         </div>
                     </div>
-                    <div class="place-block">
+                    <div class="place-block" id="place7">
                         <h3>Кофейня “ВРЕМЯ КОФЕ”</h3>
                         <img src="/img/place-img4.jpg" alt="" />
 
@@ -172,10 +178,12 @@
                             >
                         </div>
                         <div class="place-button">
-                            <button class="btn-order">Заказать</button>
+                            <a href="#popup-order2" class="btn-order">
+                                Заказать
+                            </a>
                         </div>
                     </div>
-                    <div class="place-block">
+                    <div class="place-block" id="place8">
                         <h3>Бар “RELAX & DRINK”</h3>
                         <img src="/img/place-img5.jpg" alt="" />
 
@@ -197,10 +205,12 @@
                             >
                         </div>
                         <div class="place-button">
-                            <button class="btn-order">Заказать</button>
+                            <a href="#popup-order2" class="btn-order">
+                                Заказать
+                            </a>
                         </div>
                     </div>
-                    <div class="place-block">
+                    <div class="place-block" id="place9">
                         <h3>Ресторан “FALCONE”</h3>
                         <img src="/img/place-img6.jpg" alt="" />
 
@@ -222,10 +232,12 @@
                             >
                         </div>
                         <div class="place-button">
-                            <button class="btn-order">Заказать</button>
+                            <a href="#popup-order2" class="btn-order">
+                                Заказать
+                            </a>
                         </div>
                     </div>
-                    <div class="place-block">
+                    <div class="place-block" id="place10">
                         <h3>Ресторан “AMERICAN BBQ”</h3>
                         <img src="/img/place-img7.jpg" alt="" />
 
@@ -247,10 +259,12 @@
                             >
                         </div>
                         <div class="place-button">
-                            <button class="btn-order">Заказать</button>
+                            <a href="#popup-order2" class="btn-order">
+                                Заказать
+                            </a>
                         </div>
                     </div>
-                    <div class="place-block">
+                    <div class="place-block" id="place11">
                         <h3>Кофейня “ПАРАГРАФ”</h3>
                         <img src="/img/place-img8.jpg" alt="" />
 
@@ -272,10 +286,12 @@
                             >
                         </div>
                         <div class="place-button">
-                            <button class="btn-order">Заказать</button>
+                            <a href="#popup-order2" class="btn-order">
+                                Заказать
+                            </a>
                         </div>
                     </div>
-                    <div class="place-block">
+                    <div class="place-block" id="place12">
                         <h3>Ресторан “SANCHELLO ROSSO”</h3>
                         <img src="/img/place-img9.jpg" alt="" />
 
@@ -297,7 +313,9 @@
                             >
                         </div>
                         <div class="place-button">
-                            <button class="btn-order">Заказать</button>
+                            <a href="#popup-order2" class="btn-order">
+                                Заказать
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -395,6 +413,127 @@
                                         class="reg-input"
                                         type="submit"
                                         value="Зарегистрироваться"
+                                    />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="popup-order2" class="popup">
+                <a href="#place4" class="popup__area"></a>
+                <div class="popup__body">
+                    <div class="popup__content__register">
+                        <div class="popup__text__register">
+                            <form
+                                class="form-register"
+                                action="check.php"
+                                method="POST"
+                            >
+                                <a href="#place4" class="popup__close__register"
+                                    ><i class="far fa-times-circle"></i
+                                ></a>
+                                <h2 class="reg-h2">Заказ</h2>
+                                <div class="form-field input-right">
+                                    <select
+                                        name="place"
+                                        class="reg-input reg-pass"
+                                        required
+                                    >
+                                        <option selected disabled hidden>
+                                            Выберите заведение
+                                        </option>
+                                        <option value="4">
+                                            Ресторан “MELT & HOPES”
+                                        </option>
+                                        <option value="5">
+                                            Ресторан “ASIA’S WIND”
+                                        </option>
+                                        <option value="6">
+                                            Кофейня “EYFEL BAKERY”
+                                        </option>
+                                        <option value="1">
+                                            Кофейня “Время кофе”
+                                        </option>
+                                        <option value="2">
+                                            Бар “Relax and drink”
+                                        </option>
+                                        <option value="3">
+                                            Ресторан «Falcone»
+                                        </option>
+                                        <option value="7">
+                                            Ресторан “AMERICAN BBQ”
+                                        </option>
+                                        <option value="8">
+                                            Кофейня “ПАРАГРАФ”
+                                        </option>
+                                        <option value="9">
+                                            Ресторан “SANCHELLO ROSSO”
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="form-field multi-input">
+                                    <input
+                                        class="reg-input"
+                                        type="text"
+                                        name="order-name"
+                                        id="order-name"
+                                        placeholder="Ваше имя"
+                                    />
+                                </div>
+                                <div class="form-field input-right">
+                                    <input
+                                        class="reg-input"
+                                        type="text"
+                                        name="order-number"
+                                        id="order-number"
+                                        placeholder="Контактный номер"
+                                    />
+                                </div>
+                                <div class="form-field input-right">
+                                    <select
+                                        name="order-person"
+                                        id="order-person"
+                                        class="reg-input reg-pass"
+                                        required
+                                    >
+                                        <option selected disabled hidden>
+                                            Выберите количество человек
+                                        </option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>Более 5 человек</option>
+                                    </select>
+                                </div>
+                                <div class="form-field input-right">
+                                    <input
+                                        class="reg-input"
+                                        type="text"
+                                        name="order-time"
+                                        id="order-time"
+                                        placeholder="На какое время бронируем?"
+                                    />
+                                </div>
+                                <div class="form-field input-right">
+                                    <textarea
+                                        class="reg-input"
+                                        name="order-comment"
+                                        cols="40"
+                                        rows="5"
+                                        name="mail"
+                                        id="mail"
+                                        placeholder="Комментарии"
+                                    ></textarea>
+                                </div>
+
+                                <div class="form-field submit-field">
+                                    <input
+                                        class="reg-input"
+                                        type="submit"
+                                        value="Забронировать"
                                     />
                                 </div>
                             </form>

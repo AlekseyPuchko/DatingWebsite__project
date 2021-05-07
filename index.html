@@ -95,7 +95,7 @@
             </section>
 
             <section class="slider">
-                <div class="slide1">
+                <div class="slide1" id="place1">
                     <div class="slide-text">
                         <h3>Кофейня “Время кофе”</h3>
                         <p class="slide-adress">
@@ -111,12 +111,10 @@
                             остановиться, ведь кафе-пекарня «Время кофе» именно
                             то, что Вам нужно.
                         </p>
-                        <button id="show-order1" class="btn-order">
-                            Заказать
-                        </button>
+                        <a href="#popup-order" class="btn-order"> Заказать </a>
                     </div>
                 </div>
-                <div class="slide2">
+                <div class="slide2" id="place2">
                     <div class="slide-text">
                         <h3>Бар “Relax and drink”</h3>
                         <p class="slide-adress">г. Минск, ул. Зыбицкая, 18</p>
@@ -130,12 +128,10 @@
                             а также подвигаться в такт музыкальных композиций
                             выступающих исполнителей.
                         </p>
-                        <button id="show-order2" class="btn-order">
-                            Заказать
-                        </button>
+                        <a href="#popup-order" class="btn-order"> Заказать </a>
                     </div>
                 </div>
-                <div class="slide3">
+                <div class="slide3" id="place3">
                     <div class="slide-text">
                         <h3>Ресторан «Falcone»</h3>
                         <p class="slide-adress">
@@ -150,9 +146,7 @@
                             Минске, и сегодня продолжает традиции итальянской
                             гастрономии в современной подаче.
                         </p>
-                        <button id="show-order3" class="btn-order">
-                            Заказать
-                        </button>
+                        <a href="#popup-order" class="btn-order"> Заказать </a>
                     </div>
                 </div>
             </section>
@@ -250,6 +244,109 @@
                                         class="reg-input"
                                         type="submit"
                                         value="Зарегистрироваться"
+                                    />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="popup-order" class="popup">
+                <a href="#slide1" class="popup__area"></a>
+                <div class="popup__body">
+                    <div class="popup__content__register">
+                        <div class="popup__text__register">
+                            <form
+                                class="form-register"
+                                action="check.php"
+                                method="POST"
+                            >
+                                <a href="#place1" class="popup__close__register"
+                                    ><i class="far fa-times-circle"></i
+                                ></a>
+                                <h2 class="reg-h2">Заказ</h2>
+                                <div class="form-field input-right">
+                                    <select
+                                        name="place"
+                                        class="reg-input reg-pass"
+                                        required
+                                    >
+                                        <option selected disabled hidden>
+                                            Выберите заведение
+                                        </option>
+                                        <option value="1">
+                                            Кофейня “Время кофе”
+                                        </option>
+                                        <option value="2">
+                                            Бар “Relax and drink”
+                                        </option>
+                                        <option value="3">
+                                            Ресторан «Falcone»
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="form-field multi-input">
+                                    <input
+                                        class="reg-input"
+                                        type="text"
+                                        name="order-name"
+                                        id="order-name"
+                                        placeholder="Ваше имя"
+                                    />
+                                </div>
+                                <div class="form-field input-right">
+                                    <input
+                                        class="reg-input"
+                                        type="text"
+                                        name="order-number"
+                                        id="order-number"
+                                        placeholder="Контактный номер"
+                                    />
+                                </div>
+                                <div class="form-field input-right">
+                                    <select
+                                        name="order-person"
+                                        id="order-person"
+                                        class="reg-input reg-pass"
+                                        required
+                                    >
+                                        <option selected disabled hidden>
+                                            Выберите количество человек
+                                        </option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>Более 5 человек</option>
+                                    </select>
+                                </div>
+                                <div class="form-field input-right">
+                                    <input
+                                        class="reg-input"
+                                        type="text"
+                                        name="order-time"
+                                        id="order-time"
+                                        placeholder="На какое время бронируем?"
+                                    />
+                                </div>
+                                <div class="form-field input-right">
+                                    <textarea
+                                        class="reg-input"
+                                        name="order-comment"
+                                        cols="40"
+                                        rows="5"
+                                        name="mail"
+                                        id="mail"
+                                        placeholder="Комментарии"
+                                    ></textarea>
+                                </div>
+
+                                <div class="form-field submit-field">
+                                    <input
+                                        class="reg-input"
+                                        type="submit"
+                                        value="Забронировать"
                                     />
                                 </div>
                             </form>
