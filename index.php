@@ -14,7 +14,7 @@ require "db.php";
             #register, #login {
                 display:none;
             }
-            </style>
+</style>
 <?php else : ?>
 <?php endif; ?>
 
@@ -131,7 +131,7 @@ require "db.php";
                             остановиться, ведь кафе-пекарня «Время кофе» именно
                             то, что Вам нужно.
                         </p>
-                        <a href="#popup-order" class="btn-order"> Заказать </a>
+                        <a href="/order.php" class="btn-order"> Заказать </a>
                     </div>
                 </div>
                 <div class="slide2" id="place2">
@@ -148,7 +148,7 @@ require "db.php";
                             а также подвигаться в такт музыкальных композиций
                             выступающих исполнителей.
                         </p>
-                        <a href="#popup-order" class="btn-order"> Заказать </a>
+                        <a href="/order.php" class="btn-order"> Заказать </a>
                     </div>
                 </div>
                 <div class="slide3" id="place3">
@@ -166,115 +166,10 @@ require "db.php";
                             Минске, и сегодня продолжает традиции итальянской
                             гастрономии в современной подаче.
                         </p>
-                        <a href="#popup-order" class="btn-order"> Заказать </a>
+                        <a href="/order.php" class="btn-order"> Заказать </a>
                     </div>
                 </div>
             </section>
-
-           
-            <div id="popup-order" class="popup">
-                <a href="#slide1" class="popup__area"></a>
-                <div class="popup__body">
-                    <div class="popup__content__register">
-                        <div class="popup__text__register">
-                            <form
-                                class="form-register"
-                                action="check.php"
-                                method="POST"
-                            >
-                                <a href="#place1" class="popup__close__register"
-                                    ><i class="far fa-times-circle"></i
-                                ></a>
-                                <h2 class="reg-h2">Заказ</h2>
-                                <div class="form-field input-right">
-                                    <select
-                                        name="place"
-                                        class="reg-input reg-pass"
-                                        required
-                                    >
-                                        <option selected disabled hidden>
-                                            Выберите заведение
-                                        </option>
-                                        <option value="1">
-                                            Кофейня “Время кофе”
-                                        </option>
-                                        <option value="2">
-                                            Бар “Relax and drink”
-                                        </option>
-                                        <option value="3">
-                                            Ресторан «Falcone»
-                                        </option>
-                                    </select>
-                                </div>
-                                <div class="form-field multi-input">
-                                    <input
-                                        class="reg-input"
-                                        type="text"
-                                        name="order-name"
-                                        id="order-name"
-                                        placeholder="Ваше имя"
-                                    />
-                                </div>
-                                <div class="form-field input-right">
-                                    <input
-                                        class="reg-input"
-                                        type="text"
-                                        name="order-number"
-                                        id="order-number"
-                                        placeholder="Контактный номер"
-                                    />
-                                </div>
-                                <div class="form-field input-right">
-                                    <select
-                                        name="order-person"
-                                        id="order-person"
-                                        class="reg-input reg-pass"
-                                        required
-                                    >
-                                        <option selected disabled hidden>
-                                            Выберите количество человек
-                                        </option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                        <option>Более 5 человек</option>
-                                    </select>
-                                </div>
-                                <div class="form-field input-right">
-                                    <input
-                                        class="reg-input"
-                                        type="text"
-                                        name="order-time"
-                                        id="order-time"
-                                        placeholder="На какое время бронируем?"
-                                    />
-                                </div>
-                                <div class="form-field input-right">
-                                    <textarea
-                                        class="reg-input"
-                                        name="order-comment"
-                                        cols="40"
-                                        rows="5"
-                                        name="mail"
-                                        id="mail"
-                                        placeholder="Комментарии"
-                                    ></textarea>
-                                </div>
-
-                                <div class="form-field submit-field">
-                                    <input
-                                        class="reg-input"
-                                        type="submit"
-                                        value="Забронировать"
-                                    />
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </main>
         <footer>
             <div class="footer-block">

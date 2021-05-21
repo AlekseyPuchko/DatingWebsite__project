@@ -63,6 +63,10 @@ if(isset($data['do_signup'])){
     {
         $errors[] = 'Слишком длинная запись фамилии. Проверьте правильность ее заполнения';
     }
+    if(mb_strlen($data['password']) < 5 || mb_strlen($data['password']) > 25)
+    {
+        $errors[] = 'Длина пароля от 5 до 25 символов';
+    }
 
     if(empty($errors)){
 // все хорошо, регистрируем
@@ -243,7 +247,7 @@ echo '<div style="color:green;">Вы успешно зарегистрирова
             var uploadField = document.getElementById("photo");
             uploadField.onchange = function() {
                 if((this.files[0].size > 3097152) || (this.files[0].size < 3) ){
-                alert("File is too big!");
+                alert("Фото слишком много весит!");
                 this.value = "";
     };
 };
