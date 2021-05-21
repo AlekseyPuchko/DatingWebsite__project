@@ -19,9 +19,9 @@
                 <input type="checkbox" id="checkbox-menu" />
                 <label for="checkbox-menu">
                     <ul class="menu touch">
-                        <li><a class="logo" href="/index.html"></a></li>
+                        <li><a class="logo" href="/index.php"></a></li>
                         <li>
-                            <a class="bordleft search-mini" href="/index.html"
+                            <a class="bordleft search-mini" href="/index.php"
                                 >Главная</a
                             >
                         </li>
@@ -385,14 +385,12 @@
                                     </select>
                                 </div>
                                 <script>
-                                    const select = document.querySelector(
-                                        "#age"
-                                    );
+                                    const select =
+                                        document.querySelector("#age");
 
                                     for (let i = 18; i <= 100; i++) {
-                                        const option = document.createElement(
-                                            "option"
-                                        );
+                                        const option =
+                                            document.createElement("option");
                                         option.textContent = option.value = i;
                                         select.append(option);
                                     }
