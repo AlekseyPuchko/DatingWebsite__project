@@ -46,20 +46,20 @@ require "db.php";
                             >
                         </li>
                         <li>
-                            <a class="bordleft" href="/css/about.html">О нас</a>
+                            <a class="bordleft" href="/about.php">О нас</a>
                         </li>
                         <li>
-                            <a class="bordleft" href="/css/news.html"
+                            <a class="bordleft" href="/news.php"
                                 >Новости</a
                             >
                         </li>
                         <li>
-                            <a class="bordleft" href="/css/places.html"
+                            <a class="bordleft" href="/places.php"
                                 >Места</a
                             >
                         </li>
                         <li>
-                            <a class="bordleft contacts" href="/css/people.html"
+                            <a class="bordleft contacts" href="/people.php"
                                 >Люди</a
                             >
                         </li>

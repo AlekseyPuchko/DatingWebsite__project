@@ -1,3 +1,23 @@
+<?php 
+require "db.php";
+?>
+
+<?php if (isset($_SESSION['logged_user'])):  ?>
+    
+<center>
+    Вы авторизовались на сайте. <br/>
+Здравствуйте, <?php echo $_SESSION['logged_user'] ->login; ?>!
+<a href="/logout.php">Выйти</a>
+</center>
+<hr>
+<style>
+            #register, #login {
+                display:none;
+            }
+</style>
+<?php else : ?>
+<?php endif; ?>
+
 <!DOCTYPE html>
 <html lang="ru">
     <head>
@@ -26,30 +46,29 @@
                             >
                         </li>
                         <li>
-                            <a class="bordleft" href="/css/about.html">О нас</a>
+                            <a class="bordleft" href="/about.php">О нас</a>
                         </li>
                         <li>
-                            <a class="bordleft" href="/css/news.html"
+                            <a class="bordleft" href="/news.php"
                                 >Новости</a
                             >
                         </li>
                         <li>
-                            <a class="bordleft" href="/css/places.html"
+                            <a class="bordleft" href="/places.php"
                                 >Места</a
                             >
                         </li>
                         <li>
-                            <a class="bordleft contacts" href="/css/people.html"
+                            <a class="bordleft contacts" href="/people.php"
                                 >Люди</a
                             >
                         </li>
-                        <li><a class="bordleft" href="#">Профиль</a></li>
+                        <li><a class="bordleft" id="login" href="/login.php">Войти</a></li>
                         <li>
                             <a
-                                href="#popup-register"
+                                href="/signup.php"
                                 id="register"
                                 class="bordleft"
-                                href="#"
                                 >Регистрация</a
                             >
                         </li>

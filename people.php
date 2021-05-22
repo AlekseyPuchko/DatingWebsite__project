@@ -1,3 +1,23 @@
+<?php 
+require "db.php";
+?>
+
+<?php if (isset($_SESSION['logged_user'])):  ?>
+    
+<center>
+    Вы авторизовались на сайте. <br/>
+Здравствуйте, <?php echo $_SESSION['logged_user'] ->login; ?>!
+<a href="/logout.php">Выйти</a>
+</center>
+<hr>
+<style>
+            #register, #login {
+                display:none;
+            }
+</style>
+<?php else : ?>
+<?php endif; ?>
+
 <!DOCTYPE html>
 <html lang="ru">
     <head>
@@ -26,30 +46,29 @@
                             >
                         </li>
                         <li>
-                            <a class="bordleft" href="/css/about.html">О нас</a>
+                            <a class="bordleft" href="/about.php">О нас</a>
                         </li>
                         <li>
-                            <a class="bordleft" href="/css/news.html"
+                            <a class="bordleft" href="/news.php"
                                 >Новости</a
                             >
                         </li>
                         <li>
-                            <a class="bordleft" href="/css/places.html"
+                            <a class="bordleft" href="/places.php"
                                 >Места</a
                             >
                         </li>
                         <li>
-                            <a class="bordleft contacts" href="/css/people.html"
+                            <a class="bordleft contacts" href="/people.php"
                                 >Люди</a
                             >
                         </li>
-                        <li><a class="bordleft" href="#">Профиль</a></li>
+                        <li><a class="bordleft" id="login" href="/login.php">Войти</a></li>
                         <li>
                             <a
-                                href="#popup-register"
+                                href="/signup.php"
                                 id="register"
                                 class="bordleft"
-                                href="#"
                                 >Регистрация</a
                             >
                         </li>
@@ -59,71 +78,149 @@
             </nav>
         </header>
         <main>
-            <section class="stats wrapper">
-                <div class="stats-text">
-                    <h2>О НАС</h2>
-                    <hr />
-                    <p>
-                        Знакомься с новыми классными людьми, заводи друзей
-                        <br />
-                        и ищи свою половинку здесь, открывая для себя крутые,
-                        интересные <br />и необычные места вместе!
-                    </p>
-                    <hr />
-                </div>
-            </section>
+            <section class="people wrapper">
+                <div class="people-container">
+                    <div class="people-block">
+                        <div class="buttons-search">
+                            <form action="">
+                                <input
+                                    type="text"
+                                    placeholder="Поиск"
+                                    id="livesearch"
+                                />
+                            </form>
+                        </div>
 
-            <section class="steps">
-                <div class="wrapper">
-                    <h2>Как это работает?</h2>
-                    <p class="steps-text">
-                        Мы вам поможем отлично провести время, наслаждаясь
-                        атмосферой уютного кафе или изысканного ресторана. А,
-                        может, вы любите активный отдых и экстрим? Что бы вы не
-                        пожелали, у нас вы найдете для себя место, которое вы
-                        будете счастливы посетить с близким по духу человеком.
-                    </p>
+                        <div class="people-info">
+                            <div class="people-img">
+                                <img src="/img/person1.jpg" alt="" />
+                            </div>
+                            <div class="people-text">
+                                <h4>Татьяна Макарова</h4>
+                                <p>Минск, 24 года</p>
 
-                    <div class="steps-container">
-                        <div class="stepblock" id="stepbl1">
-                            <p class="step-num">01</p>
-                            <h4><span>01</span>Регистрация</h4>
-                            <p class="step-info">
-                                Регистрируйтесь на сайте, расскажите немного о
-                                себе, включая ваши увлечения и интересы
-                            </p>
-                            <a class="steps-links" href="#popup-register">
-                                <p class="stepinfolast">Зарегистрироваться</p>
-                            </a>
+                                <div class="people-button">
+                                    <img src="/img/addfriend-icon.svg" alt="" />
+                                    <button class="btn-addfriend">
+                                        Добавить в друзья
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="stepblock">
-                            <p class="step-num">02</p>
-                            <h4><span>02</span>Поиск человека</h4>
-                            <p class="step-info">
-                                Среди множества анкет реальных людей найдите
-                                близкого по духу человека, с которым хотели бы
-                                встретиться
-                            </p>
-                            <a class="steps-links" href="/css/people.html">
-                                <p class="stepinfolast" id="stepbrdr2">
-                                    Перейти к поиску
-                                </p>
-                            </a>
+                        <div class="people-info">
+                            <div class="people-img">
+                                <img src="/img/person2.jpg" alt="" />
+                            </div>
+                            <div class="people-text">
+                                <h4>Коля Трачевский</h4>
+                                <p>Витебск, 33 года</p>
+
+                                <div class="people-button">
+                                    <img src="/img/addfriend-icon.svg" alt="" />
+                                    <button class="btn-addfriend">
+                                        Добавить в друзья
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="stepblock">
-                            <p class="step-num">03</p>
-                            <h4><span>03</span>Выбор и бронирование места</h4>
-                            <p class="step-info">
-                                Благодаря нашему удобному сервису вы можете с
-                                легкостью забронировать любое понравившееся вам
-                                заведение
-                            </p>
-                            <a class="steps-links" href="/css/places.html"
-                                ><p class="stepinfolast" id="stepbrdr3">
-                                    Перейти к выбору
-                                </p>
-                            </a>
+                        <div class="people-info">
+                            <div class="people-img">
+                                <img src="/img/person3.jpg" alt="" />
+                            </div>
+                            <div class="people-text">
+                                <h4>Игнат Василевский</h4>
+                                <p>Минск, 23 года</p>
+
+                                <div class="people-button">
+                                    <img src="/img/addfriend-icon.svg" alt="" />
+                                    <button class="btn-addfriend">
+                                        Добавить в друзья
+                                    </button>
+                                </div>
+                            </div>
                         </div>
+                        <div class="people-info">
+                            <div class="people-img">
+                                <img src="/img/person4.jpg" alt="" />
+                            </div>
+                            <div class="people-text">
+                                <h4>Ульяна Хвощевская</h4>
+                                <p>Минск, 32 года</p>
+
+                                <div class="people-button">
+                                    <img src="/img/addfriend-icon.svg" alt="" />
+                                    <button class="btn-addfriend">
+                                        Добавить в друзья
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="searchpeople-block">
+                        <h2>Расширенный поиск</h2>
+                        <form action="check.php" method="POST">
+                            <div class="wide-search">
+                                <div class="find-city">
+                                    <label for="city"
+                                        ><i class="fas fa-city"></i>Город
+                                    </label>
+                                    <select
+                                        name="city"
+                                        id="city"
+                                        class=""
+                                        required
+                                    >
+                                        <option>Минск</option>
+                                        <option>Брест</option>
+                                        <option>Витебск</option>
+                                        <option>Гомель</option>
+                                        <option>Гродно</option>
+                                        <option>Могилев</option>
+                                    </select>
+                                </div>
+
+                                <div class="find-gender">
+                                    <label for="gender"
+                                        ><i class="fas fa-venus-mars"></i
+                                        >Пол</label
+                                    >
+                                    <select
+                                        name="gender"
+                                        id="sex"
+                                        class=""
+                                        required
+                                    >
+                                        <option>Мужcкой</option>
+                                        <option>Женский</option>
+                                        <option>Любой</option>
+                                    </select>
+                                </div>
+
+                                <div class="find-age">
+                                    <label for="age"
+                                        ><i class="fas fa-user-alt"></i
+                                        >Возраст</label
+                                    >
+                                    <span class="span-age">ОТ</span>
+                                    <input
+                                        class=""
+                                        type="text"
+                                        name="age"
+                                        id="age-first"
+                                        placeholder="18"
+                                    />
+
+                                    <span class="span-age">ДО</span>
+                                    <input
+                                        class=""
+                                        type="text"
+                                        name="age"
+                                        id="age-last"
+                                        placeholder="99"
+                                    />
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </section>

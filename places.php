@@ -1,3 +1,23 @@
+<?php 
+require "db.php";
+?>
+
+<?php if (isset($_SESSION['logged_user'])):  ?>
+    
+<center>
+    Вы авторизовались на сайте. <br/>
+Здравствуйте, <?php echo $_SESSION['logged_user'] ->login; ?>!
+<a href="/logout.php">Выйти</a>
+</center>
+<hr>
+<style>
+            #register, #login {
+                display:none;
+            }
+</style>
+<?php else : ?>
+<?php endif; ?>
+
 <!DOCTYPE html>
 <html lang="ru">
     <head>
@@ -26,30 +46,29 @@
                             >
                         </li>
                         <li>
-                            <a class="bordleft" href="/css/about.html">О нас</a>
+                            <a class="bordleft" href="/about.php">О нас</a>
                         </li>
                         <li>
-                            <a class="bordleft" href="/css/news.html"
+                            <a class="bordleft" href="/news.php"
                                 >Новости</a
                             >
                         </li>
                         <li>
-                            <a class="bordleft" href="/css/places.html"
+                            <a class="bordleft" href="/places.php"
                                 >Места</a
                             >
                         </li>
                         <li>
-                            <a class="bordleft contacts" href="/css/people.html"
+                            <a class="bordleft contacts" href="/people.php"
                                 >Люди</a
                             >
                         </li>
-                        <li><a class="bordleft" href="#">Профиль</a></li>
+                        <li><a class="bordleft" id="login" href="/login.php">Войти</a></li>
                         <li>
                             <a
-                                href="#popup-register"
+                                href="/signup.php"
                                 id="register"
                                 class="bordleft"
-                                href="#"
                                 >Регистрация</a
                             >
                         </li>
@@ -97,7 +116,7 @@
                             >
                         </div>
                         <div class="place-button">
-                            <a href="#popup-order2" class="btn-order">
+                            <a href="/order-lg.php" class="btn-order">
                                 Заказать
                             </a>
                         </div>
@@ -124,7 +143,7 @@
                             >
                         </div>
                         <div class="place-button">
-                            <a href="#popup-order2" class="btn-order">
+                            <a href="/order-lg.php" class="btn-order">
                                 Заказать
                             </a>
                         </div>
@@ -151,7 +170,7 @@
                             >
                         </div>
                         <div class="place-button">
-                            <a href="#popup-order2" class="btn-order">
+                            <a href="/order-lg.php" class="btn-order">
                                 Заказать
                             </a>
                         </div>
@@ -178,7 +197,7 @@
                             >
                         </div>
                         <div class="place-button">
-                            <a href="#popup-order2" class="btn-order">
+                            <a href="/order-lg.php" class="btn-order">
                                 Заказать
                             </a>
                         </div>
@@ -205,7 +224,7 @@
                             >
                         </div>
                         <div class="place-button">
-                            <a href="#popup-order2" class="btn-order">
+                            <a href="/order-lg.php" class="btn-order">
                                 Заказать
                             </a>
                         </div>
@@ -232,7 +251,7 @@
                             >
                         </div>
                         <div class="place-button">
-                            <a href="#popup-order2" class="btn-order">
+                            <a href="/order-lg.php" class="btn-order">
                                 Заказать
                             </a>
                         </div>
@@ -259,7 +278,7 @@
                             >
                         </div>
                         <div class="place-button">
-                            <a href="#popup-order2" class="btn-order">
+                            <a href="/order-lg.php" class="btn-order">
                                 Заказать
                             </a>
                         </div>
@@ -286,7 +305,7 @@
                             >
                         </div>
                         <div class="place-button">
-                            <a href="#popup-order2" class="btn-order">
+                            <a href="/order-lg.php" class="btn-order">
                                 Заказать
                             </a>
                         </div>
@@ -313,7 +332,7 @@
                             >
                         </div>
                         <div class="place-button">
-                            <a href="#popup-order2" class="btn-order">
+                            <a href="/order-lg.php" class="btn-order">
                                 Заказать
                             </a>
                         </div>
@@ -411,127 +430,6 @@
                                         class="reg-input"
                                         type="submit"
                                         value="Зарегистрироваться"
-                                    />
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="popup-order2" class="popup">
-                <a href="#place4" class="popup__area"></a>
-                <div class="popup__body">
-                    <div class="popup__content__register">
-                        <div class="popup__text__register">
-                            <form
-                                class="form-register"
-                                action="check.php"
-                                method="POST"
-                            >
-                                <a href="#place4" class="popup__close__register"
-                                    ><i class="far fa-times-circle"></i
-                                ></a>
-                                <h2 class="reg-h2">Заказ</h2>
-                                <div class="form-field input-right">
-                                    <select
-                                        name="place"
-                                        class="reg-input reg-pass"
-                                        required
-                                    >
-                                        <option selected disabled hidden>
-                                            Выберите заведение
-                                        </option>
-                                        <option value="4">
-                                            Ресторан “MELT & HOPES”
-                                        </option>
-                                        <option value="5">
-                                            Ресторан “ASIA’S WIND”
-                                        </option>
-                                        <option value="6">
-                                            Кофейня “EYFEL BAKERY”
-                                        </option>
-                                        <option value="1">
-                                            Кофейня “Время кофе”
-                                        </option>
-                                        <option value="2">
-                                            Бар “Relax and drink”
-                                        </option>
-                                        <option value="3">
-                                            Ресторан «Falcone»
-                                        </option>
-                                        <option value="7">
-                                            Ресторан “AMERICAN BBQ”
-                                        </option>
-                                        <option value="8">
-                                            Кофейня “ПАРАГРАФ”
-                                        </option>
-                                        <option value="9">
-                                            Ресторан “SANCHELLO ROSSO”
-                                        </option>
-                                    </select>
-                                </div>
-                                <div class="form-field multi-input">
-                                    <input
-                                        class="reg-input"
-                                        type="text"
-                                        name="order-name"
-                                        id="order-name"
-                                        placeholder="Ваше имя"
-                                    />
-                                </div>
-                                <div class="form-field input-right">
-                                    <input
-                                        class="reg-input"
-                                        type="text"
-                                        name="order-number"
-                                        id="order-number"
-                                        placeholder="Контактный номер"
-                                    />
-                                </div>
-                                <div class="form-field input-right">
-                                    <select
-                                        name="order-person"
-                                        id="order-person"
-                                        class="reg-input reg-pass"
-                                        required
-                                    >
-                                        <option selected disabled hidden>
-                                            Выберите количество человек
-                                        </option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                        <option>Более 5 человек</option>
-                                    </select>
-                                </div>
-                                <div class="form-field input-right">
-                                    <input
-                                        class="reg-input"
-                                        type="text"
-                                        name="order-time"
-                                        id="order-time"
-                                        placeholder="На какое время бронируем?"
-                                    />
-                                </div>
-                                <div class="form-field input-right">
-                                    <textarea
-                                        class="reg-input"
-                                        name="order-comment"
-                                        cols="40"
-                                        rows="5"
-                                        name="mail"
-                                        id="mail"
-                                        placeholder="Комментарии"
-                                    ></textarea>
-                                </div>
-
-                                <div class="form-field submit-field">
-                                    <input
-                                        class="reg-input"
-                                        type="submit"
-                                        value="Забронировать"
                                     />
                                 </div>
                             </form>
