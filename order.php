@@ -119,7 +119,7 @@ echo '<div style="color:green;">Заказ создан успешно. <br/>
                                         type="text"
                                         name="tel"
                                         id="tel"
-                                        placeholder="Контактный номер"
+                                        placeholder="Контактный номер в формате 29 563-43-29"
                                         value="<?php echo @$data['tel']; ?>"
                                     />
                                 </div>

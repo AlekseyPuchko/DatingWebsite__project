@@ -101,7 +101,6 @@ echo '<div style="color:green;">Вы успешно зарегистрирова
 
 ?>
 
-
 <div id="popup-register" class="popup">
                 <a href="#" class="popup__area"></a>
                 <div class="popup__body">
